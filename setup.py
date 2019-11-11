@@ -14,10 +14,10 @@ ABOUT = os.path.join(THIS_DIR, 'ABOUT')
 config = configparser.ConfigParser()
 config.read(ABOUT)
 if sys.version_info[0] == 2:
-    name = config.get('about', 'name', 'apilib')
+    name = config.get('about', 'name', 'database')
     version = config.get('about', 'version', '0.0.0')
 else:
-    name = config['about'].get('name', 'apilib')
+    name = config['about'].get('name', 'database')
     version = config['about'].get('version', '0.0.0')
 
 requirements = []
@@ -35,7 +35,7 @@ setup(
     long_description=long_description,
     author='Chris Carl',
     author_email='ccarl2@fau.edu',
-    url='https://github.com/FAU-SWARM/api',
+    url='https://github.com/FAU-SWARM/database',
     packages=find_packages(
         exclude=['dist', 'build', 'docs', 'test']
     ),

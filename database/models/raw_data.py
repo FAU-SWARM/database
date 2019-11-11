@@ -1,11 +1,10 @@
-import datetime
+from mongoengine import ReferenceField, DictField
 
-
-from mongoengine import *
-
-
+# database imports
 from . import BaseDocument
 
 
 class RawData(BaseDocument):
-    raw = StringField(max_length=8192, required=True)
+    # raw = StringField(max_length=8192, required=True)
+    device = ReferenceField('Device')
+    raw = DictField(required=True)
