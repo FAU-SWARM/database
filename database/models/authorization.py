@@ -1,4 +1,4 @@
-from mongoengine import ReferenceField
+from mongoengine import StringField
 import logging
 LOGGER = logging.getLogger(__name__)
 LOGGER.addHandler(logging.NullHandler())
