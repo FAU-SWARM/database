@@ -1,4 +1,4 @@
-from mongoengine import StringField
+from mongoengine import StringField, DictField
 import logging
 LOGGER = logging.getLogger(__name__)
 LOGGER.addHandler(logging.NullHandler())
@@ -11,3 +11,4 @@ class User(BaseDocument):
     last_name = StringField(required=True)
     email = StringField(required=True)
     password = StringField(required=True)
+    authorization = DictField()
