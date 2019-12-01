@@ -10,3 +10,4 @@ class Project(BaseDocument):
     name = StringField(required=True, unique=True)
     description = StringField()
     img = StringField()
+    link = StringField()
