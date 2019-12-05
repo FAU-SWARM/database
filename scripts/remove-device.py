@@ -41,7 +41,7 @@ if __name__ == "__main__":
     )
 
     # https://stackoverflow.com/a/18266321
-    devices_to_delete = [dev for dev in Device.objects(meta_data__project=args.device)]
+    devices_to_delete = [dev for dev in Device.objects(name=args.device)]
     data_to_delete = [data for dev in devices_to_delete for data in RawData.objects(device=dev.id)]
 
     damned_devices = [d.id for d in devices_to_delete]
