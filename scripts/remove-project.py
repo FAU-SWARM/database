@@ -31,6 +31,10 @@ if __name__ == "__main__":
 
     args = augment_args(parser.parse_args())
 
+    print(args.env.database.name)
+    print(args.env.database.hostname)
+    print(args.env.database.port)
+
     # db connection
     connect(
         db=args.env.database.name,
